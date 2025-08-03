@@ -2159,3 +2159,127 @@ ul.ratings li {
 .content-box.core-feature {
     height: 320px !important;
 }
+
+.privacy-policy-content {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.privacy-policy-content .container {
+    max-width: 1140px;
+}
+
+.privacy-policy-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.privacy-policy-content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.privacy-policy-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-content ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-content ul li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Ensure consistency with page-hero-ss */
+.page-hero-ss {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.page-hero-ss .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.page-hero-ss .breadcrumb-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page-hero-ss .breadcrumb-link li {
+    font-size: 1rem;
+    color: #666;
+}
+
+.page-hero-ss .breadcrumb-link li.active {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.page-hero-ss .breadcrumb-link li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.page-hero-ss .breadcrumb-link li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .privacy-policy-content {
+        padding: 30px 0;
+    }
+
+    .privacy-policy-content h2 {
+        font-size: 2rem;
+    }
+
+    .privacy-policy-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .privacy-policy-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .privacy-policy-content p,
+    .privacy-policy-content ul li {
+        font-size: 0.9rem;
+    }
+
+    .page-hero-ss .page-title {
+        font-size: 2.2rem;
+    }
+}
