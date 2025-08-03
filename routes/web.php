@@ -154,13 +154,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'user.auth', 'verifi
         Route::resource('users', UserController::class);
         // get user data by id
         Route::get('get-user-data', [UserController::class, 'getUserData'])->name('users.get-user-data');
-
-        //Enquiry Routes
-        Route::post('enquiries/get-ajax-data', [EnquiryController::class, 'getAjaxData'])->name('enquiries.get-ajax-data');
-        Route::get('enquiries/{id}/status', [EnquiryController::class, 'status'])->name('enquiries.status');
-        Route::get('enquiries/{id}/restore', [EnquiryController::class, 'restore'])->name('enquiries.restore');
-        Route::resource('enquiries', EnquiryController::class);
     });
+    //Enquiry Routes
+    Route::post('enquiries/get-ajax-data', [EnquiryController::class, 'getAjaxData'])->name('enquiries.get-ajax-data');
+    Route::get('enquiries/{id}/restore', [EnquiryController::class, 'restore'])->name('enquiries.restore');
+    Route::resource('enquiries', EnquiryController::class);
 
     //Blog Routes
     Route::prefix('manage-blogs')->name('manage-blogs.')->group(function () {
@@ -231,6 +229,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'user.auth', 'verifi
     Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 });
 
+// Route::get('/', function () {
+//     return redirect('admin');
+// })->name('website.index');
 Route::get('/', [WebsiteController::class, 'index'])->name('website.index');
 Route::get('/privacy-policy', [WebsiteController::class, 'privacy_policy'])->name('privacy-policy');
+Route::get('/blog-details/{slug}', [WebsiteController::class, 'blog_details'])->name('blog-details');
 Route::post('/enquiry/store', [WebsiteController::class, 'enquiry_store'])->name('enquiry.store');
+Route::post('newsletter/subscribe', [WebsiteController::class, 'subscribe_newsletter'])->name('newsletter.subscribe');

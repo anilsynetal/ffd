@@ -49,20 +49,20 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('*', function ($view) {
             $settings = (object)[];
             $menus = (object)[];
-            $contact = (object)[];
+            $contact = Contact::first();
+            $contact->app_name = Setting::where('key', 'app_name')->first()->value ?? config('app.name');
+            $contact->app_logo = Setting::where('key', 'app_logo')->first()->value;
 
             try {
                 // Check if the database connection is available
                 DB::connection()->getPdo();
 
                 if (Auth::check()) {
-                    $contact = Contact::first();
-                    $contact->app_name = Setting::where('key', 'app_name')->first()->value;
-                    $contact->app_logo = Setting::where('key', 'app_logo')->first()->value;
+
                     $settings = Setting::get()->toArray();
                     $menus = MainMenu::with(['sub_menus' => function ($q) {
                         $q->whereNotIn('language_key', ['RoleMaster', 'ClientRegistration'])->orderBy('order', 'ASC');
-                    }])->whereNotIn('language_key', [])->where('status', 1)->orderBy('order')->get()->toArray();
+                    }])->whereNotIn('language_key', ['ManageFAQs'])->where('status', 1)->orderBy('order')->get()->toArray();
                 }
             } catch (\Exception $e) {
                 // Log error but continue execution to avoid app crash

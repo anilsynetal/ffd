@@ -49,7 +49,8 @@
                         <div class="footer-content">
                             <h4 class="widget-title">Subscribe Newsletter</h4>
                             <p>Subscribe our newsletter to get more updates </p>
-                            <form>
+                            <form name="form_action" method="post" action="{{ route('newsletter.subscribe') }}">
+                                @csrf
                                 <div class="form-group">
                                     <input type="email" class="form_control" placeholder="Email Address"
                                         name="email" required>
@@ -57,6 +58,7 @@
                                     <button class="theme-btn style-one">Subscribe <i
                                             class="far fa-angle-double-right"></i></button>
                                 </div>
+                                <div class="subscription-response mt-2"></div>
                             </form>
                         </div>
                     </div>

@@ -38,9 +38,12 @@
 
 <body class="business-website">
     <!--====== Start Preloader ======-->
+    <div id="overlay" class="overlay">
+        <div id="loader" class="loader"></div>
+    </div>
     <div class="preloader">
         <div class="loader">
-            <img src="{{ asset('website/assets/images/loader.png') }}" alt="loader">
+            <img src="{{ asset('website/assets/images/loader.png') }}" alt="loader" width="100">
         </div>
     </div><!--====== End Preloader ======-->
     <!--====== Start Overlay ======-->
@@ -85,6 +88,41 @@
     <!--====== Main js ======-->
     {{-- <script src="{{ asset('website/assets/js/theme.js') }}"></script> --}}
     <script src="{{ asset('website/assets/js/custom.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            //onclick get-consultation button, slowly scroll down upto the contact-section div id
+            $(document).on("click", ".get-consultation", function(e) {
+                e.preventDefault();
+                const section = $('#contact-section');
+                if (section.length) {
+                    $('html, body').animate({
+                        scrollTop: section.offset().top
+                    }, 1200); // 1200ms = 1.2 seconds, increase for slower scroll
+                }
+            });
+
+            // Smooth scroll for menu items
+            const menuMap = {
+                'about': 'about-section',
+                'services': 'services-section',
+                'case-studies': 'case-studies-section',
+                'blogs': 'blogs-section',
+                'core-features': 'core-features-section'
+            };
+
+            $.each(menuMap, function(menuId, sectionId) {
+                $(document).on("click", "#" + menuId, function(e) {
+                    e.preventDefault();
+                    const section = $('#' + sectionId);
+                    if (section.length) {
+                        $('html, body').animate({
+                            scrollTop: section.offset().top
+                        }, 1800); // Slower scroll
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

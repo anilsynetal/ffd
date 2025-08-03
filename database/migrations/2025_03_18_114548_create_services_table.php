@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image', 255)->nullable();
             $table->string('icon', 50)->nullable();
-            $table->string('slug', 255)->unique();
+            $table->string('slug', 255);
             $table->tinyInteger('status')->default(1);
             $table->bigInteger('created_by')->unsigned();
             $table->foreign('created_by')->references('id')->on('users');

@@ -23,15 +23,15 @@
                     <div class="col-xl-3">
                         <div class="card sticky-top1 stick-top">
                             <div class="list-group list-group-flush" id="useradd-sidenav">
-                                @can('settings.app-setting')
-                                    <a href="{{ route('settings.index', ['tab' => 'app_setting']) }}"
-                                        class="border-0 list-group-item list-group-item-action {{ request()->get('tab') == 'app_setting' || !request()->get('tab') ? 'setting-active' : '' }}">
-                                        {{ __('translation.AppSetting') }}
-                                        <div class="float-end">
-                                            <i class="ti ti-chevron-right"></i>
-                                        </div>
-                                    </a>
-                                @endcan
+                                {{-- @can('settings.app-setting') --}}
+                                <a href="{{ route('settings.index', ['tab' => 'app_setting']) }}"
+                                    class="border-0 list-group-item list-group-item-action {{ request()->get('tab') == 'app_setting' || !request()->get('tab') ? 'setting-active' : '' }}">
+                                    {{ __('translation.AppSetting') }}
+                                    <div class="float-end">
+                                        <i class="ti ti-chevron-right"></i>
+                                    </div>
+                                </a>
+                                {{-- @endcan --}}
                                 @can('settings.email-setting')
                                     <a href="{{ route('settings.index', ['tab' => 'email_setting']) }}"
                                         class="border-0 list-group-item list-group-item-action {{ request()->get('tab') == 'email_setting' ? 'setting-active' : '' }}">
@@ -83,13 +83,13 @@
                         </div>
                     </div>
                     <div class="col-xl-9">
-                        @can('settings.app-setting')
-                            <div id="app_setting">
-                                @if (request()->get('tab') == 'app_setting' || !request()->get('tab'))
-                                    @include('settings.app-setting')
-                                @endif
-                            </div>
-                        @endcan
+                        {{-- @can('settings.app-setting') --}}
+                        <div id="app_setting">
+                            @if (request()->get('tab') == 'app_setting' || !request()->get('tab'))
+                                @include('settings.app-setting')
+                            @endif
+                        </div>
+                        {{-- @endcan --}}
 
                         @can('settings.email-setting')
                             <!-- Email Setting -->

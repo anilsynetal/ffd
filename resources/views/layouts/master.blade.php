@@ -12,7 +12,7 @@
     <!-- App favicon -->
     @php
         $favicon = \App\Utils\Util::getSettingValue('favicon');
-        $faviconPath = $favicon ? asset('storage/' . $favicon) : asset('assets/img/favicon.ico');
+        $faviconPath = $favicon ? asset('storage/' . $favicon) : asset('assets/img/favicon.png');
     @endphp
     <link rel="shortcut icon" href="{{ $faviconPath }}">
     <link rel="stylesheet" href="{{ asset('assets/global/css/line-awesome.min.css') }}">

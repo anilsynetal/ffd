@@ -25,7 +25,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $common_data = Slider::getTableData();
+        $count = Slider::get()->count();
+        $common_data = Slider::getTableData($count);
         $ajax_url = $common_data['ajax_url'];
         return view('common.index', compact('common_data', 'ajax_url'));
     }
@@ -56,9 +57,9 @@ class SliderController extends Controller
             [
                 'title' => 'required',
                 'description' => 'required',
-                'button_text' => 'required',
-                'button_link' => 'required',
-                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                // 'button_text' => 'required',
+                // 'button_link' => 'required',
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]
         );
         if ($validator->fails()) {
@@ -126,9 +127,9 @@ class SliderController extends Controller
             [
                 'title' => 'required',
                 'description' => 'required',
-                'button_text' => 'required',
-                'button_link' => 'required',
-                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                // 'button_text' => 'required',
+                // 'button_link' => 'required',
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]
         );
         if ($validator->fails()) {

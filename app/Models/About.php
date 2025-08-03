@@ -40,7 +40,8 @@ class About extends Model
                 'class' => '',
                 'required' => true,
                 'placeholder' => __('translation.EnterDescription'),
-                'col_size' => 'col-md-12'
+                'col_size' => 'col-md-12',
+                'rows' => 5
             ],
             [
                 'name' => 'image',
@@ -49,9 +50,49 @@ class About extends Model
                 'id' => 'image',
                 'class' => '',
                 'required' => ($id ? false : true),
-                'placeholder' => __('translation.SelectImage'),
+                'placeholder' => __('translation.UploadImage'),
                 'col_size' => 'col-md-6'
-            ]
+            ],
+            [
+                'name' => 'diabetes_medications',
+                'label' => __('translation.DiabetesMedications'),
+                'type' => 'text',
+                'id' => 'diabetes_medications',
+                'class' => '',
+                'required' => true,
+                'placeholder' => __('translation.EnterDiabetesMedications'),
+                'col_size' => 'col-md-6'
+            ],
+            [
+                'name' => 'weight_loss',
+                'label' => __('translation.WeightLoss') . " (in Kgs)",
+                'type' => 'text',
+                'id' => 'weight_loss',
+                'class' => '',
+                'required' => true,
+                'placeholder' => __('translation.EnterWeightLoss') . " (in Kgs)",
+                'col_size' => 'col-md-6'
+            ],
+            [
+                'name' => 'cholesterol_medications',
+                'label' => __('translation.CholesterolMedications'),
+                'type' => 'text',
+                'id' => 'cholesterol_medications',
+                'class' => '',
+                'required' => true,
+                'placeholder' => __('translation.EnterCholesterolMedications'),
+                'col_size' => 'col-md-6'
+            ],
+            [
+                'name' => 'hypertension_medications',
+                'label' => __('translation.HypertensionMedications'),
+                'type' => 'text',
+                'id' => 'hypertension_medications',
+                'class' => '',
+                'required' => true,
+                'placeholder' => __('translation.EnterHypertensionMedications'),
+                'col_size' => 'col-md-6'
+            ],
         ];
 
         return $form_fields;
@@ -83,6 +124,10 @@ class About extends Model
                 __('translation.Title'),
                 __('translation.Description'),
                 __('translation.Image'),
+                __('translation.DiabetesMedications'),
+                __('translation.WeightLoss'),
+                __('translation.CholesterolMedications'),
+                __('translation.HypertensionMedications'),
                 __('translation.CreatedBy'),
                 __('translation.Status'),
                 __('translation.Action'),
@@ -94,6 +139,10 @@ class About extends Model
                 ['data' => 'title', 'name' => 'title'],
                 ['data' => 'description', 'name' => 'description', 'wrap' => true],
                 ['data' => 'image', 'name' => 'image', 'searchable' => false, 'orderable' => false],
+                ['data' => 'diabetes_medications', 'name' => 'diabetes_medications'],
+                ['data' => 'weight_loss', 'name' => 'weight_loss'],
+                ['data' => 'cholesterol_medications', 'name' => 'cholesterol_medications'],
+                ['data' => 'hypertension_medications', 'name' => 'hypertension_medications'],
                 ['data' => 'created_by', 'name' => 'created_by_user.name'],
                 ['data' => 'status', 'name' => 'status', 'searchable' => false, 'orderable' => false],
                 ['data' => 'action', 'name' => 'action', 'orderable' => false, 'searchable' => false],

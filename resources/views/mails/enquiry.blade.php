@@ -7,7 +7,7 @@
         <li>Name: {{ $details['name'] }}</li>
         <li>Email: {{ $details['email'] }}</li>
         <li>Mobile: {{ $details['mobile'] }}</li>
-        <li>Service: {{ $details['service'] }}</li>
+        <li>Company Name: {{ $details['company_name'] }}</li>
         <li>Message: {{ $details['message'] }}</li>
         <li>IP Address: {{ $details['ip_address'] }}</li>
     </ul>
@@ -23,9 +23,8 @@
         <li>Name: {{ $details['name'] }}</li>
         <li>Email: {{ $details['email'] }}</li>
         <li>Mobile: {{ $details['mobile'] }}</li>
-        <li>Service: {{ $details['service'] }}</li>
+        <li>Company Name: {{ $details['company_name'] }}</li>
         <li>Message: {{ $details['message'] }}</li>
-        <li>IP Address: {{ $details['ip_address'] }}</li>
     </ul>
     <p>We appreciate your interest in our services.</p>
     <p>Best regards,</p>

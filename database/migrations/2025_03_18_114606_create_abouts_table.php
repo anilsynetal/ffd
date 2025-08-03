@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('title', 255)->unique();
             $table->text('description')->nullable();
             $table->string('image', 255)->nullable();
+            $table->string('diabetes_medications', 20)->nullable();
+            $table->string('weight_loss', 20)->nullable();
+            $table->string('cholesterol_medications', 20)->nullable();
+            $table->string('hypertension_medications', 20)->nullable();
             $table->tinyInteger('status')->default(1);
             $table->bigInteger('created_by')->unsigned();
             $table->foreign('created_by')->references('id')->on('users');

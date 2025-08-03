@@ -62,18 +62,25 @@
                     <nav class="main-menu">
                         <ul>
                             <li class="menu-item"><a href="{{ url('/') }}">Home</a></li>
+                            <li class="menu-item"><a href="javascript:void(0);" id="about">About</a></li>
+                            <li class="menu-item"><a href="javascript:void(0);" id="services">What We Do</a></li>
+                            <li class="menu-item"><a href="javascript:void(0);" id="case-studies">Case Studies</a></li>
+                            <li class="menu-item"><a href="javascript:void(0);" id="blogs">Blogs</a>
+                            </li>
+                            <li class="menu-item"><a href="javascript:void(0);" id="core-features">Core Features</a>
+                            </li>
                         </ul>
                     </nav>
                     <!--=== Sasly Nav Button ===-->
                     <div class="sasly-nav-button mt-20 d-block d-md-none">
-                        <a href="#contact-section" class="theme-btn style-one">Get a Consultation<i
+                        <a href="{{ url('/') }}#contact-section" class="theme-btn style-one">Get a Consultation<i
                                 class="far fa-angle-double-right"></i></a>
                     </div>
                 </div>
                 <!--=== Header Nav Right ===-->
                 <div class="nav-right-item">
                     <div class="nav-button d-none d-md-block">
-                        <a href="#contact-section" class="theme-btn style-one">Get a Consultation<i
+                        <a href="javascript:void(0);" class="theme-btn style-one get-consultation">Get a Consultation<i
                                 class="far fa-angle-double-right"></i></a>
                     </div>
                     <div class="navbar-toggler">

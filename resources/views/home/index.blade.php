@@ -200,8 +200,7 @@
                 <div class="card-body">
                     <div class="d-flex mb-3">
                         <h5 class="card-title"> @lang('translation.Enquiries')</h5>
-                        <a href="{{ route('user-managements.enquiries.index') }}"
-                            class="btn btn-primary ms-auto float-end">
+                        <a href="{{ route('enquiries.index') }}" class="btn btn-primary ms-auto float-end">
                             @lang('translation.ViewAll')</a>
                     </div>
                     <table id="data_table" class="table table-striped table-bordered dt-responsive  nowrap w-100">

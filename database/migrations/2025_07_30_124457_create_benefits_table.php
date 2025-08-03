@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title', 100)->unique();
             $table->text('description')->nullable();
             $table->string('icon', 100)->nullable();
-            $table->string('slug', 100)->unique();
+            $table->string('slug', 100);
             $table->string('image', 255)->nullable();
             $table->tinyInteger('status')->default(1);
             $table->bigInteger('created_by')->unsigned();

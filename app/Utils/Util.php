@@ -979,7 +979,7 @@ class Util
                         'language_key' => 'BlogCategoryList',
                         'menu_name' => 'Blog Category List',
                         'menu_icon' => null,
-                        'route_name' => 'manage-blogs.blogs.index',
+                        'route_name' => 'manage-blogs.blog-categories.index',
                         'table_name' => 'blog_categories',
                         'permissions' => array(
                             array(
@@ -1045,7 +1045,7 @@ class Util
             array(
                 'language_key' => 'ManageTestimonials',
                 'menu_name' => 'Manage Testimonials',
-                'menu_icon' => 'bx bx-quote-alt',
+                'menu_icon' => 'bx bx-message-rounded-dots',
                 'route_name' => 'testimonials.index',
                 'table_name' => 'testimonials',
                 'permissions' => array(
@@ -1155,6 +1155,31 @@ class Util
                 'created_by_ip' => request()->ip(),
                 'sub_menus' => array(),
             ),
+            array(
+                'language_key' => 'Enquiries',
+                'menu_name' => 'Enquiries',
+                'menu_icon' => 'bx bx-phone-incoming',
+                'route_name' => 'enquiries.index',
+                'table_name' => 'enquiries',
+                'permissions' => array(
+                    array(
+                        'name' => 'View Enquiries',
+                        'permission' => 'enquiries.view'
+                    ),
+                    array(
+                        'name' => 'List',
+                        'permission' => 'enquiries.list'
+                    ),
+                    array(
+                        'name' => 'Delete',
+                        'permission' => 'enquiries.delete'
+                    ),
+                ),
+                'status' => 1,
+                'created_by' => $admin->id,
+                'created_by_ip' => request()->ip(),
+                'sub_menus' => array(),
+            ),
 
             array(
                 'language_key' => 'AccountSettings',
@@ -1233,7 +1258,7 @@ class Util
                         'permissions' => array(
                             array(
                                 'name' => 'Settings',
-                                'permission' => 'settings.settings.app-settings'
+                                'permission' => 'settings.app-setting'
                             ),
                             array(
                                 'name' => 'Email Settings',

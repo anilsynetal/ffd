@@ -97,7 +97,7 @@ ul.ratings li {
 }
 
 .hero-sb .hero-content h1 {
-    font-size: 150px;
+    font-size: 80px;
     letter-spacing: -4.5px;
     line-height: 1;
     margin-bottom: 40px;
@@ -200,8 +200,8 @@ ul.ratings li {
 }
 
 .hero-sb .hero-content .hero-image img {
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     -o-object-fit: cover;
     object-fit: cover;
     border-radius: 20px;
@@ -247,10 +247,14 @@ ul.ratings li {
 
 .about-sb .experience-box .duration {
     font: 600 16px var(--heading-font);
-    padding: 25px 40px;
+    padding: 10px;
     border: 1px solid var(--border-color);
     border-radius: 30px;
     line-height: 27px;
+    background: #f24f44;
+    color: #fff;
+    width: 240px;
+    text-align: center;
 }
 
 .about-sb .section-content-box {
@@ -2122,4 +2126,36 @@ ul.ratings li {
 
 .contact-form .form-group {
     margin-bottom: 20px;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+
+.content-box.core-feature {
+    height: 320px !important;
 }

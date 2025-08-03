@@ -56,7 +56,7 @@ class ClientController extends Controller
             $request->all(),
             [
                 'link' => 'required|url',
-                'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'logo' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]
         );
         if ($validator->fails()) {
@@ -124,7 +124,7 @@ class ClientController extends Controller
             $request->all(),
             [
                 'link' => 'required|url',
-                'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'logo' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]
         );
         if ($validator->fails()) {

@@ -61,7 +61,7 @@
         let query = this.value.trim();
 
         if (query.length > 0) {
-            fetch(`/search-suggestions?query=${encodeURIComponent(query)}`)
+            fetch(`/admin/search-suggestions?query=${encodeURIComponent(query)}`)
                 .then(response => response.json())
                 .then(data => {
                     let suggestionsBox = document.getElementById('suggestions');

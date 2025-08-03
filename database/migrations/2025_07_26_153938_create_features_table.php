@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('feature_name', 100)->unique();
             $table->text('description')->nullable();
             $table->string('icon', 100)->nullable();
-            $table->string('slug', 100)->unique();
+            $table->string('slug', 100);
             $table->string('image', 255)->nullable();
             $table->tinyInteger('is_core_feature')->default(0);
             $table->tinyInteger('status')->default(1);

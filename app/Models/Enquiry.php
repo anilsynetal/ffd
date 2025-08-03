@@ -30,10 +30,10 @@ class Enquiry extends Model
             'is_modal' => true,
             'is_modal_large' => false,
             'is_back_button' => false,
-            'view_deleted_btn' => auth()->user()->can('users_and_roles.enquiries.restore') ? false : false,
-            'back_route' => route('user-managements.enquiries.index'),
-            'index_route' => route('user-managements.enquiries.index'),
-            'create_route' => route('user-managements.enquiries.create'),
+            'view_deleted_btn' => auth()->user()->can('enquiries.restore') ? false : false,
+            'back_route' => route('enquiries.index'),
+            'index_route' => route('enquiries.index'),
+            'create_route' => route('enquiries.create'),
             'columns' => [
                 '#',
                 __('translation.Name'),
@@ -43,7 +43,7 @@ class Enquiry extends Model
                 __('translation.Message'),
                 __('translation.Action'),
             ],
-            'ajax_url' => route('user-managements.enquiries.get-ajax-data'),
+            'ajax_url' => route('enquiries.get-ajax-data'),
             'buttons' => $buttons,
             'js_columns' => [
                 ['data' => 'DT_RowIndex', 'name' => 'DT_RowIndex', 'searchable' => false, 'orderable' => false],

@@ -41,7 +41,7 @@ class Client extends Model
                 'class' => '',
                 'required' => $id ? false : true,
                 'placeholder' => __('translation.UploadLogo'),
-                'col_size' => 'col-md-6'
+                'col_size' => 'col-md-12'
             ]
         ];
 

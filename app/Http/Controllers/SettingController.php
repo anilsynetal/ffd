@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Facades\UtilityFacades;
 use App\Mail\TestMail;
-use App\Models\NotificationSetting;
 use App\Models\Setting;
 use App\Services\SMSService;
 use App\Services\WhatsAppService;

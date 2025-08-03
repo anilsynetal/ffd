@@ -72,7 +72,7 @@ class Feature extends Model
                 'class' => '',
                 'required' => false,
                 'placeholder' => '',
-                'col_size' => 'col-md-6'
+                'col_size' => 'col-md-6',
             ],
         ];
 

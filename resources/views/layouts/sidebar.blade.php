@@ -10,7 +10,7 @@
     style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
 
     <div class="app-brand demo text-center">
-        <a href="{{ url('home') }}" class="app-brand-link m-auto">
+        <a href="{{ route('root') }}" class="app-brand-link m-auto">
             <span class="app-brand-logo demo">
                 <span class="text-primary">
                     @if (file_exists(public_path('storage/' . $logo)))

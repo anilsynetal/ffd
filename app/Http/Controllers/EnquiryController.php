@@ -12,11 +12,11 @@ class EnquiryController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('permission:users_and_roles.enquiries.list|users_and_roles.enquiries.add|users_and_roles.enquiries.edit|users_and_roles.enquiries.delete|users_and_roles.enquiries.status', ['only' => ['index', 'show']]);
-        $this->middleware('permission:users_and_roles.enquiries.add', ['only' => ['create', 'store']]);
-        $this->middleware('permission:users_and_roles.enquiries.edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:users_and_roles.enquiries.delete', ['only' => ['destroy']]);
-        $this->middleware('permission:users_and_roles.enquiries.status', ['only' => ['status']]);
+        $this->middleware('permission:enquiries.list|enquiries.add|enquiries.edit|enquiries.delete|enquiries.status', ['only' => ['index', 'show']]);
+        $this->middleware('permission:enquiries.add', ['only' => ['create', 'store']]);
+        $this->middleware('permission:enquiries.edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:enquiries.delete', ['only' => ['destroy']]);
+        $this->middleware('permission:enquiries.status', ['only' => ['status']]);
     }
     /**
      * Display a listing of the resource.
@@ -121,7 +121,7 @@ class EnquiryController extends Controller
                 })
                 ->addColumn('action', function ($row) {
                     $btn = '';
-                    if (auth()->user()->can('users_and_roles.enquiries.delete')) {
+                    if (auth()->user()->can('enquiries.delete')) {
                         $btn .= '<button type="button" class="btn btn-outline-danger btn-sm delete_record" data-url="' . route('user-managements.enquiries.destroy', $row->id) . '" title="' . __('translation.Delete') . '"> <i class="fas fa-trash"></i></button>&nbsp;';
                     }
                     return $btn;
