@@ -1,12 +1,12 @@
  <section class="key-features-sb">
      <!--=== Features Bg Wrapper ===-->
-     <div class="features-bg-wrapper_two primary-black-bg pt-130 pb-105">
+     <div class="features-bg-wrapper_two primary-black-bg pt-30 pb-30">
          <div class="container">
              <div class="row">
                  <div class="col-lg-12">
                      <!--=== Section Title ===-->
-                     <div class="section-title text-white text-center mb-100" data-aos="fade-down">
-                         <span class="sub-heading"><i class="far fa-arrow-right"></i>Key Features</span>
+                     <div class="section-title text-white text-center mb-30" data-aos="fade-down">
+                         {{-- <span class="sub-heading"><i class="far fa-arrow-right"></i>Key Features</span> --}}
                          <h2 class="text-anm"><span class="font-200">Mastering Success Comprehensive</span><br>
                              Business Success Guides</h2>
                      </div>
@@ -46,13 +46,13 @@
                                      </div>
                                  @endif
                              @endforeach
-                             <div class="company-box style-one" data-aos="fade-up">
+                             {{-- <div class="company-box style-one" data-aos="fade-up">
                                  <div class="content">
                                      <img src="{{ asset('website/assets/images/logo/logo-white.png') }}"
                                          alt="Brand Logo">
                                      <h5>{{ $contact->app_name }}</h5>
                                  </div>
-                             </div>
+                             </div> --}}
                          </div>
                      </div>
                  </div>

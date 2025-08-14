@@ -1,7 +1,8 @@
 @extends('website.layout.app')
+@section('title', config('app.name') . ' – Privacy Policy')
 @section('content')
     <main>
-        <section class="page-hero-ss">
+        <section class="page-hero-ss privacy-policy-header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -16,11 +17,10 @@
                 </div>
             </div>
         </section>
-        <section class="privacy-policy-content mb-5">
+        <section class="privacy-policy-content">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>PRIVACY POLICY</h2>
                         <h3>Our Privacy Obligations</h3>
                         <p>We respect every person’s privacy about his health and the diseases if any, so we strive to
                             maintain the privacy of medical and health information of every individual for whom we provide

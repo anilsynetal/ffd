@@ -122,6 +122,33 @@
                 });
             });
         });
+
+        $(document).ready(function() {
+            $('.testimonial-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                prevArrow: '.testimonial-arrows .prev',
+                nextArrow: '.testimonial-arrows .next',
+                dots: true,
+                pauseOnHover: true,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
     </script>
 </body>
 

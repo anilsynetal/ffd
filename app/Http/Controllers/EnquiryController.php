@@ -122,7 +122,7 @@ class EnquiryController extends Controller
                 ->addColumn('action', function ($row) {
                     $btn = '';
                     if (auth()->user()->can('enquiries.delete')) {
-                        $btn .= '<button type="button" class="btn btn-outline-danger btn-sm delete_record" data-url="' . route('user-managements.enquiries.destroy', $row->id) . '" title="' . __('translation.Delete') . '"> <i class="fas fa-trash"></i></button>&nbsp;';
+                        $btn .= '<button type="button" class="btn btn-outline-danger btn-sm delete_record" data-url="' . route('enquiries.destroy', $row->id) . '" title="' . __('translation.Delete') . '"> <i class="fas fa-trash"></i></button>&nbsp;';
                     }
                     return $btn;
                 })

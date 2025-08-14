@@ -1,4 +1,4 @@
-  <section class="cta-sb bg_cover p-r z-1 pt-90 pb-40"
+  <section class="cta-sb bg_cover p-r z-1 pt-40 pb-40"
       style="background-image: url({{ asset('website/assets/images/bg/cta-bg1.jpg') }});" id="contact-section">
       <div class="container">
           <div class="row align-items-center">
@@ -39,7 +39,7 @@
                                   </div>
                               </div>
                               <div class="form-group mb-0">
-                                  <button type="submit" class="btn btn-primary w-100">Submit</button>
+                                  <button type="submit" class="theme-btn style-one w-100">Submit</button>
                               </div>
                               <div class="response mt-2"></div>
                           </form>

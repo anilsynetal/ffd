@@ -20,14 +20,14 @@
     <div class="flex-grow-1 container-p-y container-fluid">
         <div class="row g-6 mb-6">
             <div class="col-sm-6 col-xl-3">
-                <a href="{{ route('settings.teams.index') }}">
+                <a href="{{ route('testimonials.index') }}">
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between">
                                 <div class="content-left">
-                                    <span class="text-heading">Total Team Member</span>
+                                    <span class="text-heading">Total Testimonial</span>
                                     <div class="d-flex align-items-center my-1">
-                                        <h4 class="mb-0 me-2">{{ $data['total_team_members'] }}</h4>
+                                        <h4 class="mb-0 me-2">{{ $data['total_testimonials'] }}</h4>
                                     </div>
                                 </div>
                                 <div class="avatar">
@@ -223,13 +223,13 @@
                                         <td>{{ $enquiry->name }}</td>
                                         <td>{{ $enquiry->email }}</td>
                                         <td>{{ $enquiry->mobile }}</td>
-                                        <td>{{ $enquiry->compnay_name }}</td>
+                                        <td>{{ $enquiry->company_name }}</td>
                                         <td>{{ $enquiry->message }}</td>
 
                                         <td>
                                             <button type="button"
                                                 class="btn btn-outline-danger btn-sm mb-1 delete_record"
-                                                data-url="{{ route('user-managements.enquiries.destroy', $enquiry->id) }}"
+                                                data-url="{{ route('enquiries.destroy', $enquiry->id) }}"
                                                 title="{{ __('translation.Delete') }}">
                                                 <i class="fas fa-trash"></i>
                                             </button>

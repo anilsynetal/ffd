@@ -3,17 +3,17 @@
     <div class="header-top">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <!--===  Top Left  ===-->
                     <div class="top-left">
-                        <span>Welcome to {{ $contact->app_name }}</span>
+                        {{-- <span>Welcome to {{ $contact->app_name }}</span> --}}
                         <span><i class="fas fa-envelope"></i><a
                                 href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></span>
                         <span><i class="fas fa-phone"></i>Call : <a href="tel:+91{{ $contact->phone }}">+91
                                 {{ $contact->phone }}</a></span>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-4 d-none">
                     <!--===  Top Right  ===-->
                     <div class="top-right">
                         <ul class="social-link">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <!--====  Header Navigation  ===-->
-    <div class="header-navigation">
+    <div class="header-navigation sticky-top">
         <!--====  Header Nav Inner  ===-->
         <div class="nav-inner-menu">
             <!--====  Primary Menu  ===-->
@@ -62,12 +62,13 @@
                     <nav class="main-menu">
                         <ul>
                             <li class="menu-item"><a href="{{ url('/') }}">Home</a></li>
-                            <li class="menu-item"><a href="javascript:void(0);" id="about">About</a></li>
+
                             <li class="menu-item"><a href="javascript:void(0);" id="services">What We Do</a></li>
+                            <li class="menu-item"><a href="javascript:void(0);" id="about">About Us</a></li>
+                            <li class="menu-item"><a href="javascript:void(0);" id="core-features">Program Benefits</a>
+                            </li>
                             <li class="menu-item"><a href="javascript:void(0);" id="case-studies">Case Studies</a></li>
                             <li class="menu-item"><a href="javascript:void(0);" id="blogs">Blogs</a>
-                            </li>
-                            <li class="menu-item"><a href="javascript:void(0);" id="core-features">Core Features</a>
                             </li>
                         </ul>
                     </nav>

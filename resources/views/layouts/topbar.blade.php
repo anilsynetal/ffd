@@ -8,7 +8,7 @@
 
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
         <!-- Search -->
-        <div class="navbar-nav align-items-center">
+        <div class="navbar-nav align-items-center d-none">
             <form class="app-search d-none d-lg-block" method="post" action="{{ route('home.search') }}">
                 @csrf
                 <div class="nav-item position-relative"> <!-- Added position-relative for parent -->

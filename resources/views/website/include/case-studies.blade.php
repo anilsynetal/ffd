@@ -1,9 +1,9 @@
-  <section class="case-study-sb pt-130 pb-130 overflow-hidden" id="case-studies-section">
+  <section class="case-study-sb pt-30 pb-30 overflow-hidden" id="case-studies-section">
       <div class="container">
           <div class="row align-items-end">
               <div class="col-md-8">
                   <div class="section-title mb-60">
-                      <span class="sub-heading"><i class="far fa-arrow-right"></i>Case Studies</span>
+                      {{-- <span class="sub-heading"><i class="far fa-arrow-right"></i>Case Studies</span> --}}
                       <h2 class="text-anm"><span class="font-200">
                               <div style="position:relative;display:inline-block;">
                                   <div

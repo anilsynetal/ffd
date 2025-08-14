@@ -108,7 +108,7 @@ class NewsLetterController extends Controller
                 ->addColumn('action', function ($row) {
                     $btn = '';
                     if (auth()->user()->can('news_letters.delete')) {
-                        $btn .= '<button type="button" class="btn btn-outline-danger btn-sm delete_record" data-url="' . route('user-managements.enquiries.destroy', $row->id) . '" title="' . __('translation.Delete') . '"> <i class="fas fa-trash"></i></button>&nbsp;';
+                        $btn .= '<button type="button" class="btn btn-outline-danger btn-sm delete_record" data-url="' . route('news-letters.destroy', $row->id) . '" title="' . __('translation.Delete') . '"> <i class="fas fa-trash"></i></button>&nbsp;';
                     }
                     return $btn;
                 })

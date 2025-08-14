@@ -11,7 +11,7 @@ Version: 1.0
 --*/
 /* Common CSS */
 :root {
-    --primary-color: #F14F44;
+    --primary-color: #00A5DF;
     --primary-black-color: #1F1F1F;
     --gray-color: #F0F2F4;
 }
@@ -60,7 +60,17 @@ ul.ratings li {
 /* Header CSS */
 /* Hero CSS */
 .hero-sb {
-    padding: 295px 0 95px;
+    padding: 295px 0 20px;
+}
+
+.home-banner-section h1 {
+    font-size: 45px;
+    line-height: 60px;
+    margin-bottom: 15px;
+}
+
+.home-banner-section p {
+    font-size: 25px;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -77,6 +87,10 @@ ul.ratings li {
 
 .hero-sb .hero-content {
     position: relative;
+}
+
+.services-content {
+    height: 320px;
 }
 
 @media screen and (max-width: 991px) {
@@ -112,9 +126,9 @@ ul.ratings li {
 }
 
 @media (min-width: 1200px) and (max-width: 1450px) {
-    .hero-sb .hero-content h1 {
+    /* .hero-sb .hero-content h1 {
         font-size: 120px;
-    }
+    } */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -138,6 +152,9 @@ ul.ratings li {
 
 .hero-sb .hero-content p {
     margin-bottom: 35px;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
 }
 
 .hero-sb .hero-content p span {
@@ -251,7 +268,7 @@ ul.ratings li {
     border: 1px solid var(--border-color);
     border-radius: 30px;
     line-height: 27px;
-    background: #f24f44;
+    background: var(--primary-color);
     color: #fff;
     width: 240px;
     text-align: center;
@@ -341,7 +358,7 @@ ul.ratings li {
     bottom: 0;
     left: 20%;
     max-width: 270px;
-    background-color: var(--primary-color);
+    background-color: #F14F44;
     border-radius: 10px;
     padding: 40px 30px 30px;
     text-align: center;
@@ -349,6 +366,11 @@ ul.ratings li {
 
 .key-features-sb .section-image-box .company-box .content img {
     margin-bottom: 28px;
+}
+
+.about-content-top {
+    font-size: 20px;
+
 }
 
 .key-features-sb .section-image-box .company-box .content h5 {
@@ -437,6 +459,11 @@ ul.ratings li {
 
 .company-sb .company-item {
     cursor: pointer;
+    display: contents;
+}
+
+.privacy-policy-header {
+    padding: 175px 0 35px !important;
 }
 
 .company-sb .company-item .company-img {
@@ -2157,11 +2184,12 @@ ul.ratings li {
 
 
 .content-box.core-feature {
-    height: 320px !important;
+    height: 270px !important;
+    padding-bottom: 0px !important;
 }
 
 .privacy-policy-content {
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #f9f9f9;
 }
 
@@ -2213,49 +2241,6 @@ ul.ratings li {
     margin-bottom: 10px;
 }
 
-/* Ensure consistency with page-hero-ss */
-.page-hero-ss {
-    background-color: #fff;
-    padding: 60px 0;
-}
-
-.page-hero-ss .page-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 15px;
-}
-
-.page-hero-ss .breadcrumb-link {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.page-hero-ss .breadcrumb-link li {
-    font-size: 1rem;
-    color: #666;
-}
-
-.page-hero-ss .breadcrumb-link li.active {
-    color: #007bff;
-    font-weight: 600;
-}
-
-.page-hero-ss .breadcrumb-link li a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.page-hero-ss .breadcrumb-link li a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .privacy-policy-content {
@@ -2277,9 +2262,5 @@ ul.ratings li {
     .privacy-policy-content p,
     .privacy-policy-content ul li {
         font-size: 0.9rem;
-    }
-
-    .page-hero-ss .page-title {
-        font-size: 2.2rem;
     }
 }

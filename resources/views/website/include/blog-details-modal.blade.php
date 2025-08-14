@@ -17,10 +17,10 @@
         <strong>Description:</strong>
         <div>{!! $blog->description !!}</div>
     </div>
-    <div class="mb-3 text-muted">
+    {{-- <div class="mb-3 text-muted">
         <small>Published on: {{ $blog->created_at->format('l d, Y') }}</small>
-    </div>
+    </div> --}}
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-danger modal-close">@lang('translation.Close')</button>
+    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">@lang('translation.Close')</button>
 </div>
